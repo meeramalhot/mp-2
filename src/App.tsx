@@ -1,6 +1,17 @@
 import { useEffect, useState } from "react";
+import styled from "styled-components";
 import BluePrint from "./components/BluePrint.tsx";
 import Character from "./interfaces/Character.ts";
+
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Lucida Console", "Courier New", monospace;
+  width: 80vw;
+  margin: auto;
+`;
 
 export default function App() {
     const[data, setData]=useState<Character>({fact:"", length:0});
@@ -22,7 +33,10 @@ export default function App() {
 
   return (
   <>
+      <Container>
       <BluePrint data={data}/>
+      <img src="./assets/cat.gif" alt="cat sleeping gif"/>
+      </Container>
   </>
   )
 }
