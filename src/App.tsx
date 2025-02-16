@@ -13,6 +13,19 @@ const Container = styled.div`
   margin: auto;
 `;
 
+const ImageDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+`;
+
+const CatImage = styled.img`
+  width: 80vh;
+  height: auto;   
+  margin: auto;
+
+`;
+
 export default function App() {
     const[data, setData]=useState<Character>({fact:"", length:0});
 
@@ -35,7 +48,9 @@ export default function App() {
   <>
       <Container>
       <BluePrint data={data}/>
-      <img src="./assets/cat.gif" alt="cat sleeping gif"/>
+      <ImageDiv>
+      <CatImage src="/cat.gif" alt="cat sleeping gif"/>
+      </ImageDiv>
       </Container>
   </>
   )
