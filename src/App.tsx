@@ -49,7 +49,7 @@ export default function App() {
       <Container>
       <BluePrint data={data}/>
       <ImageDiv>
-      <CatImage src="/cat.gif" alt="cat sleeping gif"/>
+        <CatImage src="/cat.gif" alt="cat sleeping gif"/>
       </ImageDiv>
       </Container>
   </>
