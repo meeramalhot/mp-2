@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import BluePrint from "./components/BluePrint.tsx";
+import Character from "./interfaces/Character.ts"
 
 export default function App() {
-    const[data, setData]=useState({});
+    const[data, setData]=useState<Character>({fact:"", length:0});
+
 
     useEffect(()=> {
       async function fetchData() {
